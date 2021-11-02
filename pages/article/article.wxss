@@ -1,0 +1,15 @@
+/* pages/article/article.wxss */
+
+.article {
+  margin: 10rpx 20rpx;
+}
+
+.title {
+  font-size: xx-large;
+  font-weight: bolder;
+  
+}
+.submit-date {
+  font-size: small;
+  color: lightgray;
+}

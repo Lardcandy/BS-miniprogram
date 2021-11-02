@@ -1,0 +1,7 @@
+<!--pages/article/article.wxml-->
+<!-- 文章详情页 -->
+<view class='article'>
+  <view class='title'>{{ atc.article_title }}</view>
+  <view class='submit-date'>{{ atc.submit_date }}</view>
+  <rich-text nodes='{{ atc.article_htmlContent }}'></rich-text>
+</view>

@@ -1,0 +1,50 @@
+<!--pages/home/home.wxml-->
+<!-- <text>pages/home/home.wxml</text> -->
+
+<!-- <view class='login'>
+  <input id='username' type="text" name='username' placeholder="用户名" ="" />
+  <input id='password' type="password" name='password' placeholder="密码" />
+  <button bindtap="submit">登录</button>
+</view> -->
+
+<!-- data-weui-theme="dark"适配dark mode -->
+<view class="main">
+  <!-- banner图 -->
+  <view>
+    <swiper indicator-dots="true" autoplay="true" class="swiper-box">
+      <block wx:for="{{picList}}" wx:for-item="item" wx:key="picNo">
+        <swiper-item>
+          <cover-image src="{{item.picUrl}}" class="swiper-img"></cover-image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <!-- 功能区 -->
+  <view class="entry-box">
+    <block wx:for="{{entryList}}" wx:for-item="item" wx:key="entryNo">
+      <view class="entry">
+        <cover-image class="entry-icon" src="{{item.picUrl}}"></cover-image>
+        <text class="entry-text">{{item.entryName}}</text>
+      </view>
+    </block>
+  </view>
+
+  <!-- 文章区 -->
+  <view class="atc-box-header">
+    <text>推荐</text>
+  </view>
+  <view class='article-box'>
+    <block wx:for="{{articleList}}" wx:for-index='{{item.article_id}}'>
+      <view class="article-bar" data-atcId='{{ item.article_id }}' bindtap='jumpAtcDetail'>
+        <view class="atc-title">{{ item.article_title }}</view>
+        <view class="atc-content">{{ item.article_content }}</view>
+        <text class="atc-author">{{ item.username }}</text>
+        <text class="atc-time">{{ item.submit_date}}</text>
+      </view>
+    </block>
+  </view>
+
+  <!-- tabbar区 -->
+  <mp-tabbar class="tabbar" list="{{tabbarList}}" ext-class="true"></mp-tabbar>
+</view>

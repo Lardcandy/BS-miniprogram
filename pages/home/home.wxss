@@ -1,0 +1,107 @@
+/* pages/home/home.wxss */
+
+/* .login { */
+  /* display: flex;
+  flex-direction: column; */
+  /* width: 100%; */
+  /* background-color: antiquewhite; */
+  /* padding: 10rpx 20rpx; */
+/* } */
+/* #username, #password { */
+  /* width: 100%; */
+  /* height: 30rpx; */
+  /* border: solid 1rpx lightgray;
+  border-radius: 4rpx;
+  margin: 10rpx 0;
+  padding: 0 10rpx;
+  font-size: 20rpx;
+  font-weight: 300;
+  color: lightgray;
+} */
+
+/* .main{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+} */
+
+.swiper-box {
+  /* width: 100%; */
+  height: 350rpx;
+}
+
+.entry-box {
+  margin: 10rpx 20rpx;
+  padding: 15rpx 0 0 0;
+  height: 150rpx;
+  background-color: lightgray;
+
+  display: flex;
+  justify-content: space-around;
+}
+
+/* 工具入口 */
+.entry {
+  width: 130rpx;
+  height: 130rpx;
+  background-color: lightgreen;
+
+  font-size: 20rpx;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.entry-icon {
+  margin-top: 15rpx;
+  max-width: 70rpx;
+  max-height: 70rpx;
+  overflow: hidden;
+  background-color: lightpink;
+}
+
+/* 文章 */
+.atc-box-header {
+  margin: 5rpx 20rpx;
+  color: gray;
+}
+.article-box {
+  background-color: lightpink;
+  margin: 5rpx 20rpx;
+  height: 100%;
+}
+.article-bar {
+  background-color: lightseagreen;
+  margin: 5rpx 0;
+}
+.atc-title {
+  font-size: medium;
+  font-weight: bold;
+}
+.atc-content {
+  width: 100%;
+  height: 30rpx;
+  overflow: hidden;
+
+  line-height: 30rpx;
+  font-size: 25rpx;
+  color: gray;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.atc-author, .atc-time {
+  margin-right: 20rpx;
+  font-size: 25rpx;
+  color: gray;
+}
+
+/* 底栏 */
+.tabbar {
+  /* justify-self: flex-end; */
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
