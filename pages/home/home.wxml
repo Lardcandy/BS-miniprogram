@@ -46,5 +46,5 @@
   </view>
 
   <!-- tabbar区 -->
-  <mp-tabbar class="tabbar" list="{{tabbarList}}" ext-class="true"></mp-tabbar>
+  <mp-tabbar class="tabbar" list="{{tabbarList}}" ext-class="true" bindchange="jumpTabPage(index, item)"></mp-tabbar>
 </view>

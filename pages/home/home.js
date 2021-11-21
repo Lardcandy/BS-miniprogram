@@ -58,28 +58,53 @@ Page({
         text: "首页",
         iconPath: "/public/tabbar/home.png",
         selectedIconPath: "/public/tabbar/home_selected.png",
-        badge: "3"
+        badge: "3",
+        pagePath: "../home/home.wxml"
       },
       {
         text: "探索",
         iconPath: "/public/tabbar/discovery.png",
         selectedIconPath: "/public/tabbar/discovery_selected.png",
-        badge: "4"
+        badge: "4",
+        pagePath: "../explore/explore.wxml"
       },
       {
         text: "写Blog",
         iconPath: "/public/tabbar/write.png",
         selectedIconPath: "/public/tabbar/write_selected.png",
-        badge: "7"
+        badge: "7",
+        pagePath: "../write/write.wxml"
       },
       {
         text: "我的",
         iconPath: "/public/tabbar/mine.png",
         selectedIconPath: "/public/tabbar/mine_selected.png",
-        badge: "9"
+        badge: "9",
+        pagePath: "../me/me.wxml"
       }
     ],
     articleList: []
+  },
+  // tabbar跳转页面
+  jumpTabPage: (index, item) => {
+    console.log(index, item)
+    // wx.navigateTo({
+    //   url: 'url',
+    // })
+  },
+  // 获取首页文章列表
+  getAllArticle: (_this) => {
+    wx.request({
+      url: getApp().globalData.baseURL + '/getAllArticle',
+      success: function(res) {
+        console.log(res)
+        if(res.data) {
+          _this.setData({
+            articleList: res.data
+          })
+        }
+      }
+    })
   },
   // 跳转文章详情页面
   jumpAtcDetail:(e) => {
@@ -148,19 +173,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  // 获取首页文章列表
-  getAllArticle: (_this) => {
-    wx.request({
-      url: getApp().globalData.baseURL + '/getAllArticle',
-      success: function(res) {
-        console.log(res)
-        if(res.data) {
-          _this.setData({
-            articleList: res.data
-          })
-        }
-      }
-    })
   }
 })
